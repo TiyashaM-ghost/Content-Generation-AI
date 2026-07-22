@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Content Generator</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="login.css">
+
+</head>
+
+<body>
+
+<div class="background">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+
+</div>
+
+<div class="container">
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+        <div class="logo-box">
+            <div class="logo">
+             <i class="fa-solid fa-robot"></i>
+            </div>
+        </div>
+        
+        <h1>
+            AI Content<br>
+            Generator
+        </h1>
+
+        <p>
+            Create articles, summaries,
+            emails and creative content
+            powered by Artificial Intelligence.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+              <i class="fa-solid fa-bolt"></i>
+               Generate content instantly
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-file-lines"></i>
+               Multiple content types
+            </div>
+        
+            <div class="feature">
+              <i class="fa-solid fa-shield-halved"></i>
+              Secure & Private
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+        <div class="tabs">
+            <button type="button" class="tab active" id="loginTab">Login</button>
+            <button type="button" class="tab" id="signupTab">Sign Up</button>
+        </div>
+
+        <!-- LOGIN -->
+        <form id="loginForm">
+            <h2>Welcome Back!</h2>
+            <p>Login to your account to continue</p>
+
+            <div class="input-box">
+                <i class="fa-regular fa-user"></i>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <i class="fa-regular fa-eye toggle" onclick="togglePassword('loginPassword', this)"></i>
+            </div>
+
+            <div class="options">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button type="button" class="google-btn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google icon">
+                Continue with Google
+            </button>
+
+            <div class="bottom">
+                Don't have an account?
+                <a href="#" id="gotoSignup">Sign Up</a>
+            </div>
+        </form>
+
+        <!-- SIGNUP -->
+        <form id="signupForm">
+            <h2>Create Account</h2>
+            <p>Start generating AI content</p>
+
+            <div class="input-box">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" placeholder="Username" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <i class="fa-regular fa-eye toggle" onclick="togglePassword('signupPassword', this)"></i>
+            </div>
+
+            <button type="submit" class="login-btn">Create account</button>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button type="button" class="google-btn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google icon">
+                Sign Up with Google
+            </button>
+
+            <div class="bottom">
+                Already have an account?
+                <a href="#" id="gotoLogin">Login</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

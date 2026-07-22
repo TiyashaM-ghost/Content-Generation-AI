@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Response Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">AI Content Generation</p>
+        <h1>Generate helpful responses with AI</h1>
+        <p class="hero-copy">
+          Type a prompt and instantly generate clear, engaging answers powered by AI.
+          Use the built-in assistant for summaries, ideas, writing help, and more.
+        </p>
+      </div>
+
+      <div class="card card-form">
+        <form id="generateForm">
+          <label for="prompt">Enter your request</label>
+          <textarea id="prompt" placeholder="Ask a question, request a summary, or describe the response you want..." rows="6"></textarea>
+          <button type="submit">Generate Response</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="result-section">
+      <div class="card card-result">
+        <h2>Generated Response</h2>
+        <div id="responseOutput" class="response-output">
+          <p>Submit a prompt to see a sample AI-generated reply.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
