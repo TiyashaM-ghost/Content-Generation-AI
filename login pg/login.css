@@ -238,6 +238,20 @@ form {
     display: none;
 }
 
+.form-message {
+    font-size: 14px;
+    margin-top: 0;
+    min-height: 22px;
+}
+
+.form-message.success {
+    color: #16a34a;
+}
+
+.form-message.error {
+    color: #dc2626;
+}
+
 h2 {
     font-size: 28px;
     color: #111827;

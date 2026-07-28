@@ -29,6 +29,55 @@ gotoSignup.addEventListener("click", (e) => {
 gotoLogin.addEventListener("click", (e) => {
     e.preventDefault();
     showForm("login");
+
+loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value;
+    const message = document.getElementById("loginMessage");
+
+    const response = await fetch("/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password })
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+        message.textContent = result.message || "Login successful.";
+        message.className = "form-message success";
+    } else {
+        message.textContent = result.error || "Login failed.";
+        message.className = "form-message error";
+    }
+});
+
+signupForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const username = document.getElementById("signupUsername").value.trim();
+    const email = document.getElementById("signupEmail").value.trim();
+    const password = document.getElementById("signupPassword").value;
+    const message = document.getElementById("signupMessage");
+
+    const response = await fetch("/signup", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, email, password })
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+        message.textContent = result.message || "Account created.";
+        message.className = "form-message success";
+    } else {
+        message.textContent = result.error || "Signup failed.";
+        message.className = "form-message error";
+    }
+});
 });
 
 function togglePassword(id, icon) {
